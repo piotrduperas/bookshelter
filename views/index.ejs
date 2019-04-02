@@ -1,0 +1,11 @@
+<%- include('navbar', {page: page}) %>
+	<div class="container table-responsive mb-5">
+		<div class="card text-center mt-5">
+			<div class="card-body">
+				<h2 class="card-title">Book Shelter</h2>
+				<p class="card-text">App for browsing free books available in the <a href="http://www.koszykowa.pl/dla-czytelnikow/schronisko-ksiazek">Book Shelter</a> in Warsaw Public Library.<br>Click the button below to generate your unique link, which you should add to your bookmarks to save your favorite settings.</p>
+				<a href="main?key=<%= req.key %>" class="btn btn-primary btn-lg">See the list</a>
+			</div>
+		</div>
+	</div>
+<%- include('footer') %>

@@ -1,0 +1,20 @@
+<%- include('navbar') %>
+	<div class="container table-responsive mb-5">
+		<div class="card mt-4">
+			<div class="card-header">
+				<h5><i class="fas fa-book mr-2"></i> List of books</h5>
+			</div>
+			<div class="card-body">
+				<b>Displayed: </b><%= Object.keys(books).length %><br>
+				<b>All books: </b><%= booksCount %><br>
+				<b>Last update: </b><%= lastUpdate %>
+			</div>
+		</div>
+		<table id="dtBooks" class="table table-bordered" cellspacing="0" data-toggle="table">
+			<thead>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+<%- include('footer') %>

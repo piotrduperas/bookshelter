@@ -1,0 +1,48 @@
+<%- include('navbar', {page: page}) %>
+	<div class="container table-responsive mb-5">
+		<div class="card mt-4">
+			<div class="card-header">
+				<h5><i class="fas fa-heart mr-2"></i> Your favorite books</h5>
+			</div>
+			<div class="card-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm">
+							<b>Displayed: </b><%= Object.keys(books).length %><br>
+							<b>All books: </b><%= booksCount %><br>
+							<b>Last update: </b><%= lastUpdate %>
+						</div>
+						<div class="col-sm">
+							Click the check icon to mark a book as ordered. Click the button below to generate a simple table of your chosen books.<br>
+							<button type="button" id="makeList" class="float-middle mt-2 btn btn-primary btn-lg" data-toggle="modal" data-target="#orderedModal">Make list</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<table id="dtLikedBooks" class="table table-bordered" cellspacing="0" data-toggle="table">
+			<thead>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	<div class="modal fade" id="orderedModal" tabindex="-1" role="dialog" aria-labelledby="orderedModalTitle" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="orderedModalTitle">Your ordered books</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body" id="orderedModalBody">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<%- include('footer') %>
